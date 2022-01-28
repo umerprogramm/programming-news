@@ -1,7 +1,14 @@
 import express from 'express';
 import axios from "axios";
 const app = express()
+import cors from "cors";
+
 const port = 3000
+
+
+app.use(cors({
+  origin : '*'
+}));
 
 app.get('/', (req, res) => {
     var options = {
